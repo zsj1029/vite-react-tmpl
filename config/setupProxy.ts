@@ -1,6 +1,7 @@
 import { ProxyOptions } from 'vite';
+
 /**
- * @description 开发服务器配置自定义代理规则
+ * 开发服务器配置自定义代理规则
  */
 const proxy: Record<string, string | ProxyOptions> = {
   // 字符串简写写法

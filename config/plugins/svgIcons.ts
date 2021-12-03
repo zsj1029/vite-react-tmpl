@@ -1,7 +1,7 @@
 import viteSvgIcons from 'vite-plugin-svg-icons';
 import path from 'path';
 /**
- * @description 对svg的支持，只需将svg的名字传入svg组件，即可
+ * 对svg的支持，只需将svg的名字传入svg组件，即可
  */
 export default function configSvgIcons() {
   return viteSvgIcons({

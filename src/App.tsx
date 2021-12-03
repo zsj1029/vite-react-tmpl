@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react';
 import SvgComponent from './components/svgIcon';
-import styles from './app.module.scss';
+import styles from './app.module.less';
 import { environmentVariable } from './utils';
 
 const App: FC = () => {

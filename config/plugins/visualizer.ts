@@ -1,6 +1,7 @@
 import visualizer from 'rollup-plugin-visualizer';
+import type { Plugin } from 'vite';
 /**
- * @description 对打包之后的包依赖进行分析
+ * 对打包之后的包依赖进行分析
  */
 export default function configVisualizerConfig() {
   return visualizer({
@@ -8,5 +9,5 @@ export default function configVisualizerConfig() {
     open: true,
     gzipSize: true,
     brotliSize: true,
-  });
+  }) as Plugin;
 }

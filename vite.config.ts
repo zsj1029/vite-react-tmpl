@@ -5,6 +5,7 @@ import createVitePlugins from './config/plugins';
 import cssOption from './config/style';
 import proxy from './config/setupProxy';
 import build from './config/build';
+
 export default defineConfig((configEnv) => {
   console.log(`config`, configEnv);
   const { command, mode } = configEnv;
@@ -25,5 +26,6 @@ export default defineConfig((configEnv) => {
       proxy,
     },
     build,
+    // esbuild,
   };
 });
