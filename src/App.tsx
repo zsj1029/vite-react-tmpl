@@ -1,7 +1,9 @@
 import React, { FC, useEffect } from 'react';
-import SvgComponent from './components/svgIcon';
+import loadable from '@loadable/component';
 import styles from './app.module.less';
 import { environmentVariable } from './utils';
+
+const SvgIcon = loadable(() => import('./components/svgIcon'));
 
 const App: FC = () => {
   useEffect(() => {
@@ -14,7 +16,7 @@ const App: FC = () => {
       <ul>
         <li>
           <a href="https://github.com/lgf196/ant-simple-pro">
-            <SvgComponent iconClass="logon" fontSize="30px" />
+            <SvgIcon iconClass="logon" fontSize="30px" />
             <h4>ant-simple-pro</h4>
             <section>
               简洁，美观，快速上手，支持3大框架(vue3.0,react,angular,typescript)；Concise,
@@ -24,7 +26,7 @@ const App: FC = () => {
         </li>
         <li>
           <a href="https://github.com/lgf196/JoL-player">
-            <SvgComponent iconClass="logon" fontSize="30px" />
+            <SvgIcon iconClass="logon" fontSize="30px" />
             <h4>JoL-player</h4>
             <section>
               简洁，美观，功能强大的react播放器(simple and beautiful, powerful react player)

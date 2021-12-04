@@ -8,7 +8,7 @@ import build from './config/build';
 
 export default defineConfig((configEnv) => {
   console.log(`config`, configEnv);
-  const { command, mode } = configEnv;
+  // const { command, mode } = configEnv;
   // const isBuild = command === 'build';
   return {
     base: VITE_APP_BASE,
