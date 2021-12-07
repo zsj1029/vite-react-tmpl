@@ -14,6 +14,13 @@
     "test:watch": "jest --watchAll"
   },
   "dependencies": {
+    "@ant-design/pro-card": "^1.18.6",
+    "@ant-design/pro-descriptions": "^1.10.8",
+    "@ant-design/pro-form": "^1.49.6",
+    "@ant-design/pro-layout": "^6.31.3",
+    "@ant-design/pro-list": "^1.20.6",
+    "@ant-design/pro-skeleton": "^1.0.3",
+    "@ant-design/pro-table": "^2.59.2",
     "@loadable/component": "^5.15.0",
     "ahooks": "^2.10.14",
     "antd": "^4.17.2",
@@ -22,7 +29,6 @@
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-config": "^5.1.1",
     "react-router-dom": "6.0.2",
     "retalk": "^3.2.4"
   },

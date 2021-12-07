@@ -16,7 +16,7 @@ export const VITE_APP_OPEN = false;
 /**
  * @description 是否在开发模式下，启动eslint
  */
-export const VITE_APP_ESLINT = true;
+export const VITE_APP_ESLINT = false;
 /**
  * @description 是否在打包环境下，开启打包的分析可视化图
  */

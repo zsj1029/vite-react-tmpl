@@ -1,41 +1,17 @@
-import React, { FC, useEffect } from 'react';
-import loadable from '@loadable/component';
-import styles from './app.module.less';
-import { environmentVariable } from './utils';
+import React, { FC } from 'react';
+import { ConfigProvider } from 'antd';
+import locale from 'antd/es/locale/zh_CN';
+// @ts-ignore
+import { Provider } from 'retalk';
+import store from '@/stores';
+import Router from '@/routes';
 
-const SvgIcon = loadable(() => import('./components/svgIcon'));
-
-const App: FC = () => {
-  useEffect(() => {
-    console.log(`environmentVariable()`, environmentVariable());
-  }, []);
-
-  return (
-    <div className={styles.App}>
-      <h2>Welcome to vite-react-cil</h2>
-      <ul>
-        <li>
-          <a href="https://github.com/lgf196/ant-simple-pro">
-            <SvgIcon iconClass="logon" fontSize="30px" />
-            <h4>ant-simple-pro</h4>
-            <section>
-              简洁，美观，快速上手，支持3大框架(vue3.0,react,angular,typescript)；Concise,
-              beautiful, quick to get started, support 3 big frameworks
-            </section>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/lgf196/JoL-player">
-            <SvgIcon iconClass="logon" fontSize="30px" />
-            <h4>JoL-player</h4>
-            <section>
-              简洁，美观，功能强大的react播放器(simple and beautiful, powerful react player)
-            </section>
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
-};
+const App: FC = () => (
+  <Provider store={store}>
+    <ConfigProvider locale={locale}>
+      <Router />
+    </ConfigProvider>
+  </Provider>
+);
 
 export default App;
