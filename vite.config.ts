@@ -13,9 +13,11 @@ export default defineConfig((configEnv) => {
   return {
     base: VITE_APP_BASE,
     resolve: {
-      alias: {
-        '@': path.resolve(__dirname, 'src'),
-      },
+      alias: [
+        // { '@': path.resolve(__dirname, 'src') },
+        { find: /^~antd/, replacement: path.resolve('./', 'node_modules/antd/') },
+        { find: '@', replacement: path.resolve('./', 'src') },
+      ],
     },
     plugins: createVitePlugins(),
     css: cssOption,

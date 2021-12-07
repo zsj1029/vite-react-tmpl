@@ -1,6 +1,6 @@
 // import loadable from '@loadable/component';
 import React from 'react';
-// import { Layout } from 'antd';
+import Layout from '@/layouts';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from '@/pages/app';
 
@@ -12,9 +12,9 @@ const RouterComp = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Layout />}>*/}
-        <Route path="/app" element={<App />} />
-        {/* </Route>*/}
+        <Route path="/" element={<Layout />}>
+          <Route path="/app" element={<App />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
