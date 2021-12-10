@@ -22,7 +22,7 @@
     "@ant-design/pro-skeleton": "^1.0.3",
     "@ant-design/pro-table": "^2.59.2",
     "@loadable/component": "^5.15.0",
-    "ahooks": "^2.10.14",
+    "ahooks": "^3.0.0",
     "antd": "^4.17.2",
     "axios": "^0.24.0",
     "dayjs": "^1.10.7",

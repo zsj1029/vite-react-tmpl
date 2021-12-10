@@ -11,7 +11,7 @@ const cssOption: CSSOptions = {
     less: {
       javascriptEnabled: true,
       modifyVars: {
-        // hack: `true; @import (reference)  "./src/assets/less/variable.less";`,
+        hack: `true; @import (reference)  "./src/styles/variable.less";`,
       },
     },
     // scss: {

@@ -10,7 +10,7 @@ import ProCard from '@ant-design/pro-card';
 const { TabPane } = Tabs;
 const SvgIcon = loadable(() => import('@/components/svgIcon'));
 
-const App: FC = withStore({
+const BBB: FC = withStore({
   Account: ['count', 'add', 'addLater', 'login_name'],
 })((props: any) => {
   const { count, add, addLater, login_name } = props;
@@ -35,19 +35,14 @@ const App: FC = withStore({
                   <a href="###" onClick={() => addLater(2)}>
                     <SvgIcon iconClass="logon" fontSize="30px" />
                     <h4>ant-simple-pro</h4>
-                    <section>
-                      简洁，美观，快速上手，支持3大框架(vue3.0,react,angular,typescript)；Concise,
-                      beautiful, quick to get started, support 3 big frameworks
-                    </section>
+                    <section>123123123123</section>
                   </a>
                 </li>
                 <li>
                   <a href="https://github.com/lgf196/JoL-player">
                     <SvgIcon iconClass="logon" fontSize="30px" />
                     <h4>JoL-player</h4>
-                    <section>
-                      简洁，美观，功能强大的react播放器(simple and beautiful, powerful react player)
-                    </section>
+                    <section>12312312312312</section>
                   </a>
                 </li>
               </ul>
@@ -65,4 +60,4 @@ const App: FC = withStore({
   );
 });
 
-export default App;
+export default BBB;
