@@ -1,23 +1,27 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useMemo, useState } from 'react';
 import { Button, Result, Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import './index.module.less';
-import { Link, useNavigate, useLocation, Outlet } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ProLayout, { PageContainer, BasicLayoutProps } from '@ant-design/pro-layout';
 import routes from '@/routes/config'; // 路由定义
 import defaultSetting from '@/layouts/defaultSetting'; // layouts参数
 import SvgIcon from '@/components/svgIcon';
 // @ts-ignore
 import { withStore } from 'retalk';
+import { renderRoutes } from 'react-router-config';
+import { rr } from '@/routes';
 
 const Layout: FC<BasicLayoutProps> = withStore('Account')((props: any) => {
   // const [pathname, setPathname] = useState('/env/netMgr');
   const { login_name } = props;
 
+  // const rr = useMemo(() => routes, []);
+  // console.log(props.route);
   /**
    * 获取navigate路由跳转操作对象
    */
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   /**
    * 获取location地址栏path
@@ -27,7 +31,7 @@ const Layout: FC<BasicLayoutProps> = withStore('Account')((props: any) => {
   return (
     <>
       <ProLayout
-        {...routes}
+        {...{ route: rr[0] }}
         {...defaultSetting}
         logo={() => <SvgIcon iconClass="logon" fontSize="30" />}
         location={{
@@ -47,7 +51,7 @@ const Layout: FC<BasicLayoutProps> = withStore('Account')((props: any) => {
             ...routers,
           ];
         }}
-        onMenuHeaderClick={() => navigate('/env/netMgr')}
+        // onMenuHeaderClick={() => navigate('/env/netMgr')}
         menuItemRender={(item, dom) => {
           // console.log(item);
           // return (
@@ -90,7 +94,7 @@ const Layout: FC<BasicLayoutProps> = withStore('Account')((props: any) => {
         //   </Button>,
         // ]}
         >
-          <Outlet />
+          {props.route && renderRoutes(props.route.routes)}
         </PageContainer>
       </ProLayout>
     </>

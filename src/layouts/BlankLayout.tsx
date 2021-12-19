@@ -1,12 +1,9 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
 
-const Layout: React.FC = () => {
-  return (
-    <>
-      <Outlet />
-    </>
-  );
+import { renderRoutes } from 'react-router-config';
+
+const Layout: React.FC = (props: any) => {
+  return <>{renderRoutes(props.route.routes)}</>;
 };
 
 export default Layout;
